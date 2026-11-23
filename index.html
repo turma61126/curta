@@ -373,6 +373,49 @@ button,#lens,#glass,.cd,.go,.go2{-webkit-user-select:none;user-select:none;-webk
 .ib-bd li::before{content:"";position:absolute;left:.15rem;top:50%;width:.55rem;height:.55rem;background:#e3b552;transform:translateY(-50%) rotate(45deg)}
 .ib-x{position:absolute;top:34px;right:10px;width:36px;height:36px;font:700 1.5rem/1 var(--s);color:#e3b552;border:1.5px solid #e3b552;border-radius:50%;background:none}
 body.ib-open{overflow:hidden}
+/* ===== BASTIDORES · ERROS DE GRAVAÇÃO ===== */
+.rod{display:flex;flex-wrap:wrap;align-items:center;gap:1rem}
+#er-open{flex:1 1 15rem;max-width:26rem;display:flex;align-items:center;gap:.7rem;min-height:3.2rem;padding:.9rem 1.1rem;background:var(--v);color:var(--paper);border:2px solid var(--paper);box-shadow:5px 5px 0 var(--gold);font:800 clamp(.9rem,4vw,1.1rem)/1 var(--d);letter-spacing:.02em;text-transform:uppercase;text-align:left;transition:transform .2s,box-shadow .2s}
+#er-open i{flex:none;width:.7rem;height:.7rem;border-radius:50%;background:var(--paper);animation:erb 1s steps(2) infinite}
+#er-open:hover,#er-open:focus-visible{transform:translate(-2px,-2px) rotate(-1deg);box-shadow:8px 8px 0 var(--gold);outline:0}
+#er-open:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+#er-open:hover span{animation:erg .3s steps(2) 2}
+#er-open:active{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--gold)}
+@keyframes erb{50%{opacity:.15}}@keyframes erg{0%{transform:translateX(-2px)}50%{transform:translateX(2px) skewX(-6deg)}}
+body.er-open{overflow:hidden}
+#er{position:fixed;inset:0;z-index:97;display:grid;place-items:center;padding:clamp(.5rem,3vw,2rem);background:rgba(22,16,13,.88);opacity:0;visibility:hidden;transition:opacity .35s,visibility 0s .35s}
+#er.on{opacity:1;visibility:visible;transition:opacity .35s}
+.er-in{position:relative;width:min(100%,58rem);max-height:calc(100svh - 1rem);overflow:auto;overscroll-behavior:contain;background:var(--paper) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.04 .9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='.13'/%3E%3C/svg%3E");color:var(--ink);border:2px solid var(--ink);box-shadow:10px 10px 0 var(--v);transform:translateY(28px) rotate(-.6deg) scale(.97);transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+#er.on .er-in{transform:none}
+.er-pat{height:18px;border-bottom:2px solid var(--ink);background:linear-gradient(135deg,var(--gold) 25%,transparent 25%) -9px 0/18px 18px,linear-gradient(225deg,var(--gold) 25%,transparent 25%) -9px 0/18px 18px,linear-gradient(315deg,var(--v) 25%,transparent 25%) 0 0/18px 18px,linear-gradient(45deg,var(--v) 25%,transparent 25%) 0 0/18px 18px,var(--green)}
+.er-bd{padding:clamp(1.1rem,4vw,2.4rem)}
+.er-top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.6rem 1rem;padding-right:3.4rem}
+.er-top .lab{color:#6b6258}
+.er-x{position:absolute;top:30px;right:.8rem;width:2.8rem;height:2.8rem;display:grid;place-items:center;background:var(--ink);color:var(--paper);font:700 1.5rem/1 var(--s);border:2px solid var(--ink);transition:background .2s,transform .2s}
+.er-x:hover,.er-x:focus-visible{background:var(--v);transform:rotate(90deg);outline:0}
+.er-x:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.er-bd h2{margin:1rem 0 .4rem;font:800 clamp(2rem,9vw,4.4rem)/.92 var(--d);letter-spacing:-.04em}
+.er-sub{font:italic 500 clamp(1.05rem,4vw,1.4rem)/1.3 var(--s);color:var(--v);margin-bottom:1.8rem}
+.er-bd h3{display:flex;align-items:center;gap:.7rem;margin:2rem 0 .8rem;padding-bottom:.5rem;border-bottom:2px solid var(--ink);font:700 .72rem var(--m);letter-spacing:.18em;text-transform:uppercase}
+.er-bd h3::before{content:"";width:.6rem;height:.6rem;background:var(--v);transform:rotate(45deg)}
+.er-list{list-style:none;padding:0;margin:0}
+.er-it{display:grid;grid-template-columns:auto 1fr;gap:.4rem 1rem;align-items:start;padding:.9rem 0;border-bottom:1px dashed rgba(22,16,13,.35)}
+.er-n{font:800 1.8rem/1 var(--d);color:var(--v)}
+.er-m{font:700 1.1rem/1.25 var(--s)}
+.er-e{margin-top:.25rem;font:400 .95rem/1.5 var(--s);color:#4a4036}
+.er-ph{display:inline-block;margin-right:.4rem;padding:.05rem .4rem;border:1.5px solid var(--v);color:var(--v);font:500 .6rem var(--m);letter-spacing:.14em;text-transform:uppercase;vertical-align:.1em}
+.er-go{grid-column:1/-1;display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:2.8rem;padding:.6rem 1rem;background:var(--ink);color:var(--paper);border:2px solid var(--ink);font:700 .75rem var(--m);letter-spacing:.12em;text-transform:uppercase;text-decoration:none;transition:background .2s,color .2s}
+a.er-go:hover,a.er-go:focus-visible{background:var(--gold);color:var(--ink);outline:0}
+span.er-go{background:none;color:#6b6258;border-style:dashed;border-color:rgba(22,16,13,.4)}
+.er-vid{position:relative;aspect-ratio:16/9;background:var(--ink);border:2px solid var(--ink);box-shadow:6px 6px 0 var(--gold)}
+.er-vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.er-vid p{position:absolute;inset:0;display:grid;place-content:center;gap:.4rem;padding:1rem;text-align:center;color:var(--paper);font:500 .8rem/1.5 var(--m);letter-spacing:.1em;text-transform:uppercase}
+.er-cr{display:grid;gap:1.2rem}
+.er-cr h4{margin:0 0 .4rem;font:800 1.1rem var(--d);color:var(--v)}
+.er-cr ul{list-style:none;margin:0;padding:0;font:500 1rem/1.7 var(--s)}
+.er-cr .vz{color:#8a7f70;font-style:italic}
+@media(min-width:700px){.er-it{grid-template-columns:auto 1fr auto;align-items:center}.er-go{grid-column:auto}.er-cr{grid-template-columns:repeat(3,1fr)}}
+@media(prefers-reduced-motion:reduce){#er,.er-in{transition-duration:.01s}#er-open i,#er-open:hover span{animation:none}}
 </style></head><body class="lock">
 <div id="glass" role="button" aria-label="Quebrar o vidro: toque 4 vezes"><svg id="cr"></svg><div id="hint" class="lab">toque na tela</div></div>
 <div id="alert" role="alertdialog" aria-live="assertive"><div class="al-in"><span class="al-k">SALUS · sinal interrompido</span><i class="al-ln"></i><p class="al-1">Você não deveria<br>estar vendo isso.</p><p class="al-2">A quarta parede acabou de ceder.</p><span class="al-t">toque para continuar</span></div></div>
@@ -416,7 +459,7 @@ body.ib-open{overflow:hidden}
 <p>Com o tempo, suas memórias começam a falhar, e ele passa a questionar a verdadeira finalidade do programa e dos produtos oferecidos pela SALUS. Entre lembranças, sonhos e referências à sua ancestralidade, Zairon percebe que o futuro prometido talvez tenha um preço muito maior do que imaginava.</p>
 <p class="fnote">Aviso: a SALUS, seus personagens e tudo o que acontece neste curta são <b>fictícios</b>. Já as pessoas, histórias e conquistas dos arquivos acima são reais.</p><footer class="lf lab"><span>Atenciosamente, a Diretoria <i class="red"></i></span><span>O futuro vos espera.</span></footer></article></div></section>
 </main>
-<footer class="rod"><button id="info" type="button" aria-label="Sobre este site" aria-haspopup="dialog">i</button></footer>
+<footer class="rod"><button id="er-open" type="button" aria-haspopup="dialog"><i aria-hidden="true"></i><span>ERRO DE GRAVAÇÃO!</span></button><button id="info" type="button" aria-label="Sobre este site" aria-haspopup="dialog">i</button></footer>
 <div id="pn" role="dialog" aria-modal="true"></div><button id="x" aria-label="Fechar">✕</button>
 
 <script>
@@ -532,4 +575,49 @@ b.onclick=op;m.querySelector('.ib-x').onclick=cl;m.addEventListener('click',e=>{
 addEventListener('keydown',e=>{if(e.key==='Escape'&&!m.hidden)cl()});
 });
 </script><div id="ib" role="dialog" aria-modal="true" aria-labelledby="ibt" hidden><div class="ib-in"><button class="ib-x" type="button" aria-label="Fechar">×</button><div class="ib-pat" aria-hidden="true"></div><div class="ib-bd"><span class="lab">Informações</span><h2 id="ibt">Sobre o site</h2><p>O presente site foi desenvolvido com o auxílio de ferramentas de inteligência artificial.</p><p>Sua criação teve por propósito ampliar a proposta cinematográfica do curta-metragem, convertendo-a em uma experiência interativa que ultrapassasse o que originalmente se havia imaginado. Ainda que seus autores não possuam o conhecimento técnico adequado para torná-lo uma obra integralmente humana, o empenho aqui empregado decorre do apreço pela arte e pela criatividade.</p><p>O projeto visual do site foi pensado e organizado por:</p><ul><li>João Gabriel Schramm</li><li>R. Eduardo Farias Gomes</li></ul></div></div></div>
+<div id="er" role="dialog" aria-modal="true" aria-labelledby="er-t" aria-hidden="true" inert><div class="er-in"><button class="er-x" type="button" aria-label="Fechar bastidores">×</button><div class="er-pat" aria-hidden="true"></div><div class="er-bd"><div class="er-top"><span class="lab">SALUS · arquivo de bastidores</span><i class="stamp" id="er-stamp">Placeholder</i></div><h2 id="er-t"></h2><p class="er-sub" id="er-sub"></p><h3>Erros de gravação</h3><ol class="er-list" id="er-list"></ol><h3>Vídeo</h3><div class="er-vid" id="er-vid"></div><h3>Créditos</h3><div class="er-cr" id="er-cr"></div></div></div></div>
+<script>
+/* ============================================================
+   DADOS DOS BASTIDORES — EDITE APENAS ESTE BLOCO
+   • erros[]: { musica, erro (opcional), url (link do YouTube) }
+     Para remover o aviso "placeholder" de um item, apague a propriedade ph.
+   • creditos: listas de nomes (strings). Lista vazia = "a preencher".
+   • video.url: link do YouTube (watch, youtu.be, shorts ou embed).
+   • placeholder:false remove o selo "Placeholder" do topo.
+   ============================================================ */
+const BASTIDORES={
+ placeholder:true,
+ titulo:'Por trás das câmeras...',
+ subtitulo:'Nem tudo saiu como planejado!',
+ erros:[
+  {musica:'[PLACEHOLDER] Nome da música 1',erro:'[PLACEHOLDER] Breve identificação do erro',url:'',ph:1},
+  {musica:'[PLACEHOLDER] Nome da música 2',erro:'[PLACEHOLDER] Breve identificação do erro',url:'',ph:1},
+  {musica:'[PLACEHOLDER] Nome da música 3',erro:'',url:'',ph:1}
+ ],
+ video:{url:''},
+ creditos:{roteiro:[],atores:[],outros:[]}
+};
+</script>
+<script>
+/* ===== BASTIDORES · lógica (não precisa editar) ===== */
+(()=>{const D=BASTIDORES,q=s=>document.querySelector(s),box=q('#er'),vid=q('#er-vid'),x=box.querySelector('.er-x'),btn=q('#er-open');let last=null,t0;
+const esc=v=>String(v).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const http=u=>{try{return /^https?:$/.test(new URL(u).protocol)?u:''}catch(e){return''}};
+function yt(u){try{const a=new URL(u),h=a.hostname.replace(/^www\./,''),p=a.pathname.split('/').filter(Boolean);
+ if(h==='youtu.be')return p[0]||'';if(/(^|\.)youtube(-nocookie)?\.com$/.test(h)){if(a.searchParams.get('v'))return a.searchParams.get('v');if(['embed','shorts','live'].includes(p[0]))return p[1]||''}}catch(e){}return''}
+q('#er-t').textContent=D.titulo;q('#er-sub').textContent=D.subtitulo;q('#er-stamp').hidden=!D.placeholder;
+q('#er-list').innerHTML=D.erros.map((e,i)=>{const u=http(e.url);return `<li class="er-it"><span class="er-n">${String(i+1).padStart(2,'0')}</span><div><div class="er-m">${esc(e.musica)}</div>${e.erro?`<div class="er-e">${esc(e.erro)}</div>`:''}</div>${u?`<a class="er-go" href="${esc(u)}" target="_blank" rel="noopener noreferrer">▶ Ver no YouTube</a>`:'<span class="er-go">Link a definir</span>'}</li>`}).join('');
+const C=[['Roteiro',D.creditos.roteiro],['Atores',D.creditos.atores],['Outros participantes',D.creditos.outros]];
+q('#er-cr').innerHTML=C.map(([n,l])=>`<div><h4>${n}</h4><ul>${l&&l.length?l.map(v=>`<li>${esc(v)}</li>`).join(''):'<li class="vz">— a preencher —</li>'}</ul></div>`).join('');
+const id=yt(D.video.url||'');
+function setVid(on){vid.innerHTML=id?(on?`<iframe src="https://www.youtube-nocookie.com/embed/${encodeURIComponent(id)}?rel=0" title="Vídeo de bastidores" loading="lazy" allow="accelerometer;encrypted-media;picture-in-picture;fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>`:''):'<p><span>Vídeo a definir</span><span style="opacity:.6">cole o link em BASTIDORES.video.url</span></p>'}
+setVid(false);
+function open(){clearTimeout(t0);last=document.activeElement;box.inert=false;box.setAttribute('aria-hidden','false');box.classList.add('on');document.body.classList.add('er-open');setVid(true);x.focus({preventScroll:true});box.querySelector('.er-in').scrollTop=0}
+function close(){box.classList.remove('on');box.setAttribute('aria-hidden','true');document.body.classList.remove('er-open');t0=setTimeout(()=>{box.inert=true;setVid(false)},400);last&&last.focus&&last.focus({preventScroll:true})}
+btn.addEventListener('click',open);x.addEventListener('click',close);
+let dn=false;box.addEventListener('pointerdown',e=>{dn=e.target===box});box.addEventListener('click',e=>{if(dn&&e.target===box)close();dn=false});
+addEventListener('keydown',e=>{if(!box.classList.contains('on'))return;if(e.key==='Escape'){e.preventDefault();close()}
+ if(e.key==='Tab'){const f=[...box.querySelectorAll('a[href],button,iframe')].filter(n=>n.offsetParent!==null);if(!f.length)return;const a=f[0],z=f[f.length-1];if(e.shiftKey&&document.activeElement===a){e.preventDefault();z.focus()}else if(!e.shiftKey&&document.activeElement===z){e.preventDefault();a.focus()}}});
+})();
+</script>
 </body></html>
